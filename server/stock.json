@@ -1,0 +1,145 @@
+{
+    "GlobalQuotes": [
+        {
+            "01. symbol": "MSFT",
+            "02. open": "249.0000",
+            "03. high": "250.2800",
+            "04. low": "241.7700",
+            "05. price": "241.7700",
+            "06. volume": "11314093",
+            "07. latest trading day": "2026-03-20",
+            "08. previous close": "250.3700",
+            "09. change": "-8.6000",
+            "10. change percent": "-3.4349%"
+        },
+        {
+            "01. symbol": "SONY",
+            "02. open": "172.5000",
+            "03. high": "174.0000",
+            "04. low": "170.2000",
+            "05. price": "171.3000",
+            "06. volume": "52345678",
+            "07. latest trading day": "2026-03-20",
+            "08. previous close": "173.0000",
+            "09. change": "-1.7000",
+            "10. change percent": "-0.9827%"
+        },
+        {
+            "01. symbol": "IBM",
+            "02. open": "220.0000",
+            "03. high": "225.0000",
+            "04. low": "215.5000",
+            "05. price": "217.8000",
+            "06. volume": "45678901",
+            "07. latest trading day": "2026-03-20",
+            "08. previous close": "222.0000",
+            "09. change": "-4.2000",
+            "10. change percent": "-1.8919%"
+        },
+        {
+            "01. symbol": "XIACF",
+            "02. open": "315.0000",
+            "03. high": "318.5000",
+            "04. low": "310.0000",
+            "05. price": "312.2000",
+            "06. volume": "28456789",
+            "07. latest trading day": "2026-03-20",
+            "08. previous close": "316.0000",
+            "09. change": "-3.8000",
+            "10. change percent": "-1.2025%"
+        },
+        {
+            "01. symbol": "BABA",
+            "02. open": "480.0000",
+            "03. high": "490.0000",
+            "04. low": "470.5000",
+            "05. price": "472.3000",
+            "06. volume": "31234567",
+            "07. latest trading day": "2026-03-20",
+            "08. previous close": "485.0000",
+            "09. change": "-12.7000",
+            "10. change percent": "-2.6186%"
+        }
+    ],
+    "Companies": [
+        {
+            "Symbol": "MSFT",
+            "AssetType": "Common Stock",
+            "Name": "International Business Machines",
+            "Address": "ONE NEW ORCHARD ROAD, ARMONK, NY, UNITED STATES, 10504"
+        },
+        {
+            "Symbol": "SONY",
+            "AssetType": "Common Stock",
+            "Name": "Apple Inc.",
+            "Address": "ONE APPLE PARK WAY, CUPERTINO, CA, UNITED STATES, 95014"
+        },
+        {
+            "Symbol": "IBM",
+            "AssetType": "Common Stock",
+            "Name": "Tesla Inc.",
+            "Address": "1 TESLA ROAD, AUSTIN, TX, UNITED STATES, 78725"
+        },
+        {
+            "Symbol": "XIACF",
+            "AssetType": "Common Stock",
+            "Name": "Microsoft Corporation",
+            "Address": "ONE MICROSOFT WAY, REDMOND, WA, UNITED STATES, 98052"
+        },
+        {
+            "Symbol": "BABA",
+            "AssetType": "Common Stock",
+            "Name": "NVIDIA Corporation",
+            "Address": "2788 SAN TOMAS EXPRESSWAY, SANTA CLARA, CA, UNITED STATES, 95051"
+        }
+    ],
+    "Chart": [
+        {
+            "chartConfig": {
+                "type": "line",
+                "dataset": {
+                    "label": "Stock Price",
+                    "borderColor": "#3a86ff",
+                    "backgroundColor": "rgba(58,134,255,0.2)"
+                }
+            }
+        }
+    ],
+    "HistoricalData": {
+        "IBM": {
+            "Monthly Time Series": {
+                "2024-03-01": {
+                    "4. close": "192.50"
+                },
+                "2024-02-01": {
+                    "4. close": "185.10"
+                },
+                "2024-01-01": {
+                    "4. close": "180.20"
+                },
+                "2023-12-01": {
+                    "4. close": "175.00"
+                },
+                "2023-11-01": {
+                    "4. close": "168.40"
+                }
+            }
+        },
+        "MSFT": {
+            "Monthly Time Series": {
+                "2024-03-01": {
+                    "4. close": "415.20"
+                },
+                "2024-02-01": {
+                    "4. close": "402.10"
+                },
+                "2024-01-01": {
+                    "4. close": "395.50"
+                },
+                "2023-12-01": {
+                    "4. close": "370.00"
+                }
+            }
+        }
+    }
+}

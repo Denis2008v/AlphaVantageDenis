@@ -1,0 +1,173 @@
+.hero {
+  position: relative;
+  background: url('../img/1104529-1692774285.jpg') center/cover no-repeat;
+  height: 300px;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 30, 60, 0.75);
+
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.feature-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feature-icon {
+  background: #1e5eff;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+
+
+.stock-wrapper {
+  overflow: hidden;
+  position: relative;
+
+}
+
+.stock-track {
+  display: flex;
+  gap: 60px;
+  width: max-content;
+  animation: scrollTicker 25s linear infinite;
+}
+
+.stock-item {
+  min-width: 160px;
+  flex: 0 0 auto;
+}
+
+
+@keyframes scrollTicker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.25s ease;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sidebar.collapsed {
+  width: 52px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  min-height: 52px;
+}
+
+.sidebar-logo {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: opacity 0.2s;
+}
+
+.sidebar.collapsed .sidebar-logo {
+  opacity: 0;
+  width: 0;
+}
+
+.toggle-btn {
+  background: none;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.sidebar-nav {
+  padding: 12px 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.nav-label {
+  transition: opacity 0.15s;
+}
+
+.sidebar.collapsed .nav-label {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+#footer{
+  background-color: rgb(32, 32, 32);
+  color: grey;
+  margin-top: 200px;
+
+}
+
+#footer h6{
+  color: white;
+}

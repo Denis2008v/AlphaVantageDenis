@@ -1,0 +1,313 @@
+<html>
+
+<head>
+    <title>Borse Mercato</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/libreria.js"></script>
+    <script src="../js/index.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+    <!-- TOAST -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toastErrore" class="toast align-items-center text-bg-danger border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    <span id="toastErroreMessaggio">Si è verificato un errore.</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Chiudi"></button>
+            </div>
+        </div>
+    </div>
+    <div class="layout">
+        <!-- SIDEBAR -->
+        <aside class="sidebar collapsed" id="sidebar">
+            <div class="sidebar-header">
+                <span class="sidebar-logo">Menu Principale</span>
+                <button class="toggle-btn" onclick="toggleSidebar()">&#8942;</button>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <span class="nav-label">Mercato</span>
+                </a>
+                <a href="grafici.html" id="btnGrafici" class="nav-item">
+                    <i class="bi bi-bar-chart"></i>
+                    <span class="nav-label">Grafici</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+            <section class="hero d-flex align-items-center " style="height: 400px;">
+                <div class="container hero-content ">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h1 class="display-4 fw-bold mb-4">
+                                Valori Di Borsa
+                            </h1>
+                            <p class="lead mb-5">
+                                Monitora e analizza i prezzi delle azioni live delle principali aziende a livello
+                                mondiale.
+                                Prendi decisioni di investimento informate con approfondimenti di mercato completo.
+                            </p>
+
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="feature-box">
+                                        <div class="feature-icon">
+                                            <i class="bi bi-graph-up-arrow"></i>
+                                        </div>
+                                        <div>
+                                            <small class="text-light">Live</small>
+                                            <div>Aggiornamenti in diretta</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="feature-box">
+                                        <div class="feature-icon">
+                                            <i class="bi bi-bar-chart"></i>
+                                        </div>
+                                        <div>
+                                            <small class="text-light">Comprensivo</small>
+                                            <div>Data sul Mercato</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="feature-box">
+                                        <div class="feature-icon">
+                                            <i class="bi bi-activity"></i>
+                                        </div>
+                                        <div>
+                                            <small class="text-light">Avanzato</small>
+                                            <div>Analisi</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- CAROUSEL -->
+            <section>
+                <!-- VALORI TEMP -->
+                <div class="stock-wrapper bg-light py-3 border  ">
+                    <div class="stock-track d-flex">
+
+
+                        <div class="stock-item text-center">
+                            <h6>GOOGL</h6>
+                            <h4>542.51</h4>
+                            <p class="text-success">▲ +0.95%</p>
+                        </div>
+
+                        <div class="stock-item text-center">
+                            <h6>AMZN</h6>
+                            <h5>164.21</h5>
+                            <p class="text-success">▲ +1.41%</p>
+                        </div>
+
+                        <div class="stock-item text-center">
+                            <h6>TSLA</h6>
+                            <h5>149.31</h5>
+                            <p class="text-success">▲ +5.67%</p>
+                        </div>
+
+                        <div class="stock-item text-center">
+                            <h6>META</h6>
+                            <h5>490.47</h5>
+                            <p class="text-danger">▼ -1.08%</p>
+                        </div>
+
+                        <div class="stock-item text-center">
+                            <h6>NVDA</h6>
+                            <h5>357.02</h5>
+                            <p class="text-danger">▼ -0.16%</p>
+                        </div>
+
+                        <div class="stock-item text-center">
+                            <h6>NKE</h6>
+                            <h5>534.26</h5>
+                            <p class="text-success">▲ +1.85%</p>
+                        </div>
+
+                        <!-- DUPLICATO  PER  IL LOOP -->
+                        <div class="stock-item text-center">
+                            <h6>GOOGL</h6>
+                            <h5>542.51</h5>
+                            <p class="text-success">▲ +0.95%</p>
+                        </div>
+
+                        <div class="stock-item text-center">
+                            <h6>AMZN</h6>
+                            <h5>164.21</h5>
+                            <p class="text-success">▲ +1.41%</p>
+                        </div>
+
+                        <div class="stock-item text-center">
+                            <h6>TSLA</h6>
+                            <h5>149.31</h5>
+                            <p class="text-success">▲ +5.67%</p>
+                        </div>
+
+                        <div class="stock-item text-center">
+                            <h6>META</h6>
+                            <h5>490.47</h5>
+                            <p class="text-danger">▼ -1.08%</p>
+                        </div>
+
+                        <div class="stock-item text-center">
+                            <h6>NVDA</h6>
+                            <h5>357.02</h5>
+                            <p class="text-danger">▼ -0.16%</p>
+                        </div>
+
+                        <div class="stock-item text-center">
+                            <h6>NKE</h6>
+                            <h5>534.26</h5>
+                            <p class="text-success">▲ +1.85%</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- INFORMAZIONI -->
+            <section>
+                <div class=" container border rounded mt-5 py-4" style="background-color: rgb(253, 252, 252);">
+                    <div class="row g-3 align-items-center mx-3">
+
+
+                        <div class="col-md-3">
+                            <select class="form-select" id="formSelect">
+                                <option id="selectPlaceholder"  disabled selected>Seleziona l'Azienda</option>
+                                <option value="MSFT">Microsoft</option>
+                                <option value="SONY">Sony</option>
+                                <option value="IBM">IBM</option>
+                                <option value="XIACF">Xiaomi</option>
+                                <option value="BABA">Alibaba</option>
+                            </select>
+
+
+                        </div>
+
+                        <div class="col-md-2">
+                            <button id="btnMappa" class="btn btn-dark w-100">Apri Mappa</button>
+                        </div>
+                        <!-- Modale -->
+                        <div class="modal fade" id="mappaModal" tabindex="-1" aria-labelledby="mappaModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="mappaModalLabel">
+                                            <i class="bi bi-geo-alt-fill me-2"></i>Mappa
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Chiudi"></button>
+                                    </div>
+
+                                    <div class="modal-body p-0">
+                                        <iframe id="googleMapsIframe" width="100%" height="450"
+                                            style="border: 0; display: block;" loading="lazy" allowfullscreen
+                                            referrerpolicy="no-referrer-when-downgrade" src="">
+                                        </iframe>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Chiudi</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5">
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    🔍︎
+                                </span>
+                                <input type="text" id="InputSimboli" class="form-control" placeholder="Cerca per nome...">
+                            </div>
+                        </div>
+                        <div id="risultati" class="card mt-3" style="display:none;">
+                            <div class="card-body">
+                                <ul id="LstRisultati" class="list-group"></ul>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+                <div id="areaVisualizzazione"
+                    class="container border rounded py-5 my-5  d-flex justify-content-center align-items-center"
+                    style="background-color: rgb(253, 252, 252); text-align: center; height: 250px;">
+                    <p>Seleziona una azienda per vedere le informazioni di borsa</p>
+                </div>
+            </section>
+            <section id="footer">
+                <div class="p-5 mt-5">
+                    <div class="row">
+                        <div class="col-4">
+                            <h6 class="mb-3">Valori di borsa</h6>
+                            <p>
+                                Fornendo dati e analisi in tempo reale del mercato azionario basati su Alpha Vantage
+                                API.
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <h6 class="mb-3">Origine dei Dati</h6>
+                            <p>
+                                Alimentato da Alpha Vantage API
+                                <br>
+                                LIVE Data
+                                <br>
+                                Azioni di tutte le Aziende
+                            </p>
+                        </div>
+
+                        <div class="col-4">
+                            <h6 class="mb-3">Avvertenze</h6>
+                            <p>
+                                Tutti i dati mostrati sono solo per scopi informativi e non devono
+                                essere considerati come consulenza finanziaria.
+                            </p>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="col-12">
+                        <p>© 2026 Mercato Azionario. Tutti i diritti riservati. <br> * I dati di mercato possono essere
+                            ritardati. Si prega di verificare le informazioni critiche con fonti ufficiali. <br> **
+                            Questa
+                            piattaforma è progettata a scopo educativo e informativo. Le decisioni di investimento
+                            dovrebbero essere prese dopo aver consultato consulenti finanziari qualificati.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+</body>
+
+</html>
